@@ -142,22 +142,46 @@ int main()
 
 
 	//星号塔
-	int n;
-	scanf_s("%d", &n);
-	for (int i = 1; i <= n; i++)
+	//int n;
+	//scanf_s("%d", &n);
+	//for (int i = 1; i <= n; i++)
+	//{
+	//	for (int j = 0; j < (n - i); j++)
+	//	{
+	//		printf(" ");
+	//	}
+	//	for (int k = 0; k < (2 * i - 1); k++)
+	//	{
+	//		printf("*");
+	//	}
+	//	printf("\n");
+	//}
+
+	//最大公约数
+	//int a, b, c;
+
+	//scanf_s("%d%d", &a, &b);
+
+	//c = a > b ? a : b;
+
+	//for (; c > 0; c--)
+	//{
+	//	if ((a%c == 0) && (b%c == 0))
+	//	{
+	//		printf("%d ", c);
+	//		break;
+	//	}
+	//}
+
+	
+	int x, r;
+	scanf_s("%d", &x);
+	while (x != 0)
 	{
-		for (int j = 0; j < (n - i); j++)
-		{
-			printf(" ");
-		}
-		for (int k = 0; k < (2 * i - 1); k++)
-		{
-			printf("*");
-		}
-		printf("\n");
+		r = x % 10;
+		x = x / 10;
+		printf("%d,", r);
 	}
-
-
 
 	system("pause");
 	return 0;
