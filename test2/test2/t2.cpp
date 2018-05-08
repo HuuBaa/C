@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define N 30
+#define N 8
 #define SPACE 32
 int Sum(int n)
 {
@@ -37,8 +37,102 @@ float Sin(float x)
 }
 
 
+void printArray(int arr[], int n)
+{
+	for (int i = 0; i < n; i++)
+	{
+		printf("%d ", arr[i]);
+	}
+	printf("\n");
+}
+
+
+
+void insertArray(int arr[],int n,int key)//把key插入到前n个数的排好序的arr中
+{
+	for (int i = n-1; i >= 0; i--)
+	{
+		if (key > arr[i])
+		{
+			arr[i+1] = key;
+			break;
+		}
+		else
+		{
+			arr[i + 1] = arr[i];
+			arr[i] = key;
+		}
+	}
+	
+}
+
+
+void SelectArray(int arr[], int n)
+{
+	int k;
+	int t;
+	for (int i = 0; i < n; i++)
+	{	
+		k = i;
+		for (int j = i + 1; j < n; j++)
+		{
+			if (arr[j] < arr[k])
+				k = j;
+			if(k!=i)
+			{
+				t = arr[i];
+				arr[i] = arr[k];
+				arr[k] = t;
+			}
+		}
+	}
+}
+
+
+void BubleArray(int arr[], int n)
+{
+	int t;
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < n-i-1; j++)
+		{
+			if (arr[j] > arr[j + 1])
+			{
+				t = arr[j];
+				arr[j] = arr[j + 1];
+				arr[j + 1] = t;
+			}
+		}
+	}
+}
+
 int main()
 {	
+
+
+
+
+
+
+	//int array1[N] = {10,1,4,3,9,8,7,2};
+	//printArray(array1, N);
+
+	////插入排序
+	//for (int i = 1; i < N; i++)
+	//{
+	//	insertArray(array1, i, array1[i]);
+	//}
+	
+	//选择排序
+	//SelectArray(array1, N);
+
+	//冒泡排序
+	//BubleArray(array1, N);
+
+	//printArray(array1, N);
+	
+
+
 
 	//长方形面积=长*宽
 
@@ -133,7 +227,7 @@ int main()
 	//	printf("\n");
 	//}
 
-
+	
 
 
 	system("pause");
