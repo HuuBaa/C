@@ -79,8 +79,7 @@ int main()
 		hourEnd_x = center_x + hourLength*sin(hourAngle);
 		hourEnd_y = center_y - hourLength*cos(hourAngle);
 
-
-		//ª≠√Î’Î
+		//ª≠√Î’Î 
 		setcolor(YELLOW);
 		setlinestyle(PS_SOLID, 2);
 		line(center_x, center_y, secondEnd_x, secondEnd_y);
