@@ -74,62 +74,87 @@ int main()
 	//		fillrectangle(40 + step*(i - 1), 40+70*(j-1) , 40 + step*i, 40 + 70*j );
 	//	}
 
-	int ball_x[5],ball_y[5];
-	int ball_vx[5] = { 1,8,5,-2,5 }, ball_vy[5] = { 1,2,2,-1,5 };
-	int radius;
-	
-	radius = 30;
-	
-	for (int i = 0; i < 5; i++)
+
+	////–°«Ú
+	//int ball_x[5],ball_y[5];
+	//int ball_vx[5] = { 1,8,5,-2,5 }, ball_vy[5] = { 1,2,2,-1,5 };
+	//int radius;
+	//
+	//radius = 30;
+	//
+	//for (int i = 0; i < 5; i++)
+	//{
+	//	ball_x[i] = 50 * (i + 1);
+	//	ball_y[i] = 50 * (i + 1);
+	//}
+
+	//BeginBatchDraw();
+
+	//while(1)
+	//{	
+
+	//	setfillcolor(YELLOW);
+	//	setcolor(BLACK);
+	//	for (int i = 0; i < 5; i++)
+	//	{
+	//		fillcircle(ball_x[i], ball_y[i], radius);
+
+	//	}
+	//
+
+	//	FlushBatchDraw();
+	//	Sleep(5);
+
+	//	setcolor(BLACK);
+	//	setfillcolor(BLACK);
+	//	for (int i = 0; i < 5; i++)
+	//	{
+	//		fillcircle(ball_x[i], ball_y[i], radius);
+	//		ball_x[i] += ball_vx[i];
+	//		ball_y[i] += ball_vy[i];
+	//	}
+
+	//
+	//	for (int i = 0; i < 5; i++)
+	//	{
+	//		if (ball_x[i] < radius || ball_x[i]>640 - radius)
+	//		{
+	//			ball_vx[i] = -ball_vx[i];
+	//		}
+	//		if (ball_y[i] < radius || ball_y[i]>640 - radius)
+	//		{
+	//			ball_vy[i] = -ball_vy[i];
+	//		}
+	//	}
+
+	//}
+
+	//EndBatchDraw();
+
+	//_getch();
+	//closegraph();
+
+
+	// Û±ÍΩªª•
+	MOUSEMSG m;
+	while (1) 
 	{
-		ball_x[i] = 50 * (i + 1);
-		ball_y[i] = 50 * (i + 1);
+		m = GetMouseMsg();
+		if (m.uMsg == WM_MOUSEMOVE)
+		{
+			putpixel(m.x, m.y, WHITE);
+		}
+		else if (m.uMsg == WM_LBUTTONDOWN)
+		{
+			rectangle(m.x - 5, m.y - 5, m.x + 5, m.y + 5);
+		}
+		else if (m.uMsg == WM_RBUTTONUP)
+		{
+			circle(m.x,m.y,10);
+		}
 	}
 
-	BeginBatchDraw();
-
-	while(1)
-	{	
-
-		setfillcolor(YELLOW);
-		setcolor(BLACK);
-		for (int i = 0; i < 5; i++)
-		{
-			fillcircle(ball_x[i], ball_y[i], radius);
-
-		}
-	
-
-		FlushBatchDraw();
-		Sleep(5);
-
-		setcolor(BLACK);
-		setfillcolor(BLACK);
-		for (int i = 0; i < 5; i++)
-		{
-			fillcircle(ball_x[i], ball_y[i], radius);
-			ball_x[i] += ball_vx[i];
-			ball_y[i] += ball_vy[i];
-		}
 
 	
-		for (int i = 0; i < 5; i++)
-		{
-			if (ball_x[i] < radius || ball_x[i]>640 - radius)
-			{
-				ball_vx[i] = -ball_vx[i];
-			}
-			if (ball_y[i] < radius || ball_y[i]>640 - radius)
-			{
-				ball_vy[i] = -ball_vy[i];
-			}
-		}
-
-	}
-
-	EndBatchDraw();
-
-	_getch();
-	closegraph();
 	return 0;
 }
