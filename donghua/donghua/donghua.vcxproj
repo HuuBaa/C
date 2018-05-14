@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{F7CB0FD3-BF78-45FE-9220-83E88D81782C}</ProjectGuid>
-    <RootNamespace>bird_e</RootNamespace>
+    <ProjectGuid>{8FE33847-E593-4F13-A7E0-3CFDDEBFE39D}</ProjectGuid>
+    <RootNamespace>donghua</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -111,7 +111,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="bird_e.cpp" />
+    <ClCompile Include="donghua.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

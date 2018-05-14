@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="bird_e.cpp">
+    <ClCompile Include="donghua.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
