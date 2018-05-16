@@ -97,11 +97,30 @@ void Int2Str(int num, char *s)//Êý×Ö×ª»»×Ö·û´®
 }
 
 
+//ººÅµËþ
+
+void move(int n, char a, char b, char c)
+{
+	if (n == 1)
+		printf("%c--->%c\n", a, c);
+	else
+	{
+		move(n - 1, a, c, b);
+		printf("%c--->%c\n", a, c);
+		move(n - 1, b, a, c);
+	}
+}
+
+
+
+
 int main()
 
 {	
-
-	
+	int s;
+	printf("ÊäÈë½×Êý£º");
+	scanf_s("%d", &s);
+	move(s, 'a', 'b', 'c');
 
 	////Êý×Ö×ª»»×Ö·û´®
 	//char s[20];
@@ -302,11 +321,13 @@ int main()
 
 
 
-	int arr[5][2] = { 1,2,3,4,5,6,7,8,9,10 };
-	int (*pp)[2];
-	pp = arr;
-	printf("%d", **pp);
-	
+	//int arr[5][2] = { 1,2,3,4,5,6,7,8,9,10 };
+	//int (*pp)[2];
+	//pp = arr;
+	//printf("%d", **pp);
+	//printf("\n");
+
+
 	system("pause");
 	return 0;
 }
