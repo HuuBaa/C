@@ -320,13 +320,15 @@ int main()
 	//}
 
 
-
 	//int arr[5][2] = { 1,2,3,4,5,6,7,8,9,10 };
+
 	//int (*pp)[2];
 	//pp = arr;
 	//printf("%d", **pp);
 	//printf("\n");
 
+
+	printf("cool");
 
 	system("pause");
 	return 0;
